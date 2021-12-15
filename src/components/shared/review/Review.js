@@ -5,7 +5,7 @@ const Review = () => {
     const [ reviews, setReviews ] = useState([])
 
     useEffect( () => {
-        const uri = 'http://localhost:5000/reviews'
+        const uri = 'https://floating-peak-99575.herokuapp.com/reviews'
         fetch(uri)
             .then(res => res.json())
             .then(data => setReviews(data))

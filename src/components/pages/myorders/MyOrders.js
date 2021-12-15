@@ -13,7 +13,7 @@ const MyOrders = () => {
 
     useEffect(() => {
 
-        const uri = `http://localhost:5000/purchase?email=${user.email}`
+        const uri = `https://floating-peak-99575.herokuapp.com/purchase?email=${user.email}`
 
         fetch(uri)
             .then(res => res.json())

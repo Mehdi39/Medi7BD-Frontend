@@ -5,7 +5,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom'
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
-    const { signInWithGoogle, userSignIn, isLoading, user, authError } = useAuth()
+    const { signInWithGoogle, userSignIn, user, authError } = useAuth()
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'

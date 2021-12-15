@@ -4,7 +4,7 @@ import Product from '../../shared/product/Product';
 const HomeProduct = () => {
     const [medicines, setMedicines] = useState([])
 
-    const uri = 'http://localhost:5000/medicine'
+    const uri = 'https://floating-peak-99575.herokuapp.com/medicine'
     useEffect(() => {
         fetch(uri)
             .then(res => res.json())

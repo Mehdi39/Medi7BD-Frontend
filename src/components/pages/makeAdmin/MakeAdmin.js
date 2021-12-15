@@ -10,7 +10,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = e => {
         const user = { email }
-        fetch('http://localhost:5000/users/makeadmin', {
+        fetch('https://floating-peak-99575.herokuapp.com/users/makeadmin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

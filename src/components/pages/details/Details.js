@@ -11,14 +11,14 @@ const Details = () => {
     const [ orders, setOrders ] = useState({})
     const history = useHistory()
 
-    const { register, handleSubmit, reset } = useForm()
+    const { register, handleSubmit } = useForm()
     const onSubmit = data => {
         placeOrder(data)
         console.log(data)
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/medicine/${id}`)
+        fetch(`https://floating-peak-99575.herokuapp.com/medicine/${id}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     }, [id])
@@ -32,7 +32,7 @@ const Details = () => {
         delete newData._id
         console.log(newData)
 
-        const uri = 'http://localhost:5000/addorder'
+        const uri = 'https://floating-peak-99575.herokuapp.com/addorder'
         axios.post(uri, newData)
             .then(res => {
                 Swal.fire({

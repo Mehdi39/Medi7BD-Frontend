@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
-import Swal from "sweetalert2";
 import axios from 'axios'
 
 const AddMedicine = () => {
@@ -9,7 +8,7 @@ const AddMedicine = () => {
   const history = useHistory();
 
   const onSubmit = (data) => {
-    axios.post('http://localhost:5000/addmedicine', data)
+    axios.post('https://floating-peak-99575.herokuapp.com/addmedicine', data)
       .then(res => {
         if (res.data.insertedId) {
           alert('Data Added Successfully')

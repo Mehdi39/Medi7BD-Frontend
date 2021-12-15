@@ -12,7 +12,7 @@ const Review = () => {
     console.log(user)
 
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://floating-peak-99575.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Data Added Successfully')

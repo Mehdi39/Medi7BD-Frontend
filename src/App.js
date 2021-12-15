@@ -15,6 +15,8 @@ import Review from './components/pages/review/Review'
 import MyOrders from './components/pages/myorders/MyOrders'
 import Payment from './components/pages/payment/Payment'
 import MakeAdmin from './components/pages/makeAdmin/MakeAdmin';
+import ManageOrders from './components/pages/manageOrders/ManageOrders'
+import ManageProducts from './components/pages/manageProducts/ManageProducts'
 
 function App() {
   return (
@@ -27,7 +29,8 @@ function App() {
 
           <PrivateRoute path='/pharmacy'><Pharmacy /></PrivateRoute>
           <PrivateRoute path='/myorders'><MyOrders /></PrivateRoute>
-          <PrivateRoute path='/manageorders'><Login /></PrivateRoute>
+          <PrivateRoute path='/manageorders'><ManageOrders /></PrivateRoute>
+          <PrivateRoute path='/manageproducts'><ManageProducts /></PrivateRoute>
           <PrivateRoute path='/details/:id'><Details /></PrivateRoute>
           <PrivateRoute path='/addmedicine'><AddMedicine/></PrivateRoute>
           <PrivateRoute path='/review'><Review /></PrivateRoute>

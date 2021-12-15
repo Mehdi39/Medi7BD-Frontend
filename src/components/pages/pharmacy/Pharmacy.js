@@ -6,7 +6,7 @@ const Pharmacy = () => {
     const [ medicines, setMedicines ] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/pharmachy`)
+        fetch(`https://floating-peak-99575.herokuapp.com/pharmachy`)
             .then(res => res.json())
             .then(data => setMedicines(data))
     }, [])

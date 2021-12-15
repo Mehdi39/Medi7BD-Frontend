@@ -13,7 +13,7 @@ const useMethods = () => {
         }).then((result) => {
           if (result.isConfirmed) {
             fetch(
-              `http://localhost:5000/cancelOrder?pdID=${id}`,
+              `https://floating-peak-99575.herokuapp.com/cancelOrder?pdID=${id}`,
               {
                 method: "DELETE",
               }
@@ -32,7 +32,7 @@ const useMethods = () => {
       }
 
     const updateOrder = (id) => {
-        fetch(`http://localhost:5000/updateorder?pdID=${id}`, {
+        fetch(`https://floating-peak-99575.herokuapp.com/updateorder?pdID=${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

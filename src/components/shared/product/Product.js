@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
-import Buy from '../../pages/purchase/Buy';
-import Purchase from '../../pages/purchase/Purchase';
 
 const Product = ({ m, setPurchaseSuccess}) => {
-    const { _id, product_name, type, company_name, price, in_stock, generic, mg, img } = m
-    const [ open, setOpen ] = useState(false)
-    const handleOpen = () => setOpen(true)
-    const handleClose = () => setOpen(false)
+    const { _id, product_name, price, in_stock, mg, img } = m
 
 
     return (

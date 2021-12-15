@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon, LoginIcon } from '@heroicons/react/outline'
-import React, { useState } from 'react'
+import React from 'react'
 import logo from '../../../img/logo.png'
 import { Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
@@ -10,7 +10,6 @@ import SearchBar from './SearchBar'
 
 const navigation = [
     { name: 'Pharmacy', to: '/pharmacy', current: true },
-    // { name: 'Add_Medicine', to: '/addmedicine', current: true },
 ]
 
 function classNames(...classes) {
@@ -18,7 +17,6 @@ function classNames(...classes) {
 }
 
 const NavBar = () => {
-    const [isOpen, setisOpen] = useState(false);
     const { user, userSignOut } = useAuth();
     console.log(user.photoURL)
 

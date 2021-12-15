@@ -3,8 +3,10 @@ import Product from '../../shared/product/Product';
 import Banner from '../../shared/banner/Banner';
 
 const Pharmacy = () => {
+    // initial values
     const [ medicines, setMedicines ] = useState([])
 
+    // getting all medicine data from database
     useEffect(() => {
         fetch(`https://floating-peak-99575.herokuapp.com/pharmachy`)
             .then(res => res.json())

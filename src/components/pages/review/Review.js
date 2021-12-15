@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router";
-import Swal from "sweetalert2";
 import axios from 'axios'
 import useAuth from '../../../hooks/useAuth'
 
 const Review = () => {
+    // initial values
     const { register, handleSubmit, reset } = useForm();
-    const history = useHistory();
     const { user } = useAuth()
     console.log(user)
 
+    // saving review to database
     const onSubmit = (data) => {
         axios.post('https://floating-peak-99575.herokuapp.com/review', data)
             .then(res => {

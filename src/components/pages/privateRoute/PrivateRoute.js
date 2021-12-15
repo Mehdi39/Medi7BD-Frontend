@@ -9,6 +9,7 @@ const PrivateRoute = ({ children, ...rest }) => {
   if (isLoading) {
     return <Spinner />;
   }
+  
   return (
       <Route
         {...rest}

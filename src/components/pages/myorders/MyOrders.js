@@ -11,6 +11,7 @@ const MyOrders = () => {
     const { user } = useAuth()
     const { cancelOrder, updateUI } = useMethods()
 
+    // getting order data by user email
     useEffect(() => {
 
         const uri = `https://floating-peak-99575.herokuapp.com/purchase?email=${user.email}`

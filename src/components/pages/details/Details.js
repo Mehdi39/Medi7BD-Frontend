@@ -6,6 +6,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 
 const Details = () => {
+    // initial values
     const { user } = useAuth()
     const { id } = useParams()
     const [ orders, setOrders ] = useState({})
@@ -17,7 +18,8 @@ const Details = () => {
         console.log(data)
     }
 
-    useEffect(() => {
+    // getting medicine by id
+    useEffect(() => { 
         fetch(`https://floating-peak-99575.herokuapp.com/medicine/${id}`)
         .then(res => res.json())
         .then(data => setOrders(data))
@@ -32,6 +34,7 @@ const Details = () => {
         delete newData._id
         console.log(newData)
 
+        // saving order data to database
         const uri = 'https://floating-peak-99575.herokuapp.com/addorder'
         axios.post(uri, newData)
             .then(res => {

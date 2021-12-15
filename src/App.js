@@ -24,9 +24,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
+          {/* Open Routes */}
           <Route exact path='/'><Home /></Route>
           <Route path='/home' ><Home /></Route>
 
+          {/* Lock Routes only user can access this */}
           <PrivateRoute path='/pharmacy'><Pharmacy /></PrivateRoute>
           <PrivateRoute path='/myorders'><MyOrders /></PrivateRoute>
           <PrivateRoute path='/manageorders'><ManageOrders /></PrivateRoute>
@@ -37,6 +39,7 @@ function App() {
           <PrivateRoute path='/payment'><Payment /></PrivateRoute>
           <PrivateRoute path='/makeadmin'><MakeAdmin /></PrivateRoute>
           
+          {/* Open Routes */}
           <Route path='/registration'><Register /></Route>
           <Route path='/login'><Login /></Route>
           <Route path='*'><NotFound /></Route>

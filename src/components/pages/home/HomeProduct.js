@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Product from '../../shared/product/Product';
 
 const HomeProduct = () => {
+    // initial values
     const [medicines, setMedicines] = useState([])
 
+    // getting exact 6 medicine data
     const uri = 'https://floating-peak-99575.herokuapp.com/medicine'
     useEffect(() => {
         fetch(uri)

@@ -1,8 +1,7 @@
 import React from "react";
 import { BiDollar } from "react-icons/bi";
-import { BsHeadset, BsLaptop, BsPerson } from "react-icons/bs";
+import { BsHeadset } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
-import { RiShipFill } from "react-icons/ri";
 import BannerStyle from "./Banner.module.css";
 
 const Banner = () => {

@@ -4,6 +4,7 @@ import useAuth from '../../../hooks/useAuth'
 import { Link, useLocation, useHistory } from 'react-router-dom'
 
 const Login = () => {
+    // initial values
     const [loginData, setLoginData] = useState({})
     const { signInWithGoogle, userSignIn, user, authError } = useAuth()
     const location = useLocation();
@@ -15,6 +16,7 @@ const Login = () => {
         signInWithGoogle(history, redirect_uri);
     }
 
+    // Input field data handling
     const handleOnChange = e => {
         const field = e.target.name
         const value = e.target.value
@@ -23,6 +25,7 @@ const Login = () => {
         setLoginData(newLoginData)
     }
 
+    // Function for Login
     const handleLoginSubmi = e => {
         userSignIn(loginData.email, loginData.password, location, history)
         e.preventDefault()

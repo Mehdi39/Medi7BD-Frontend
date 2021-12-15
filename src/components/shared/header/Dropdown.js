@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
@@ -47,7 +47,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='review'>Review</Link>
+                    <Link to='/review'>Review</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -68,7 +68,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='myorders'>My Orders</Link>
+                    <Link to='/myorders'>My Orders</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -89,7 +89,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='payment'>Pay</Link>
+                    <Link to='/payment'>Pay</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -114,7 +114,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='addmedicine'>Add A Product</Link>
+                    <Link to='/addmedicine'>Add A Product</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -135,7 +135,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='makeadmin'>Make Admin</Link>
+                    <Link to='/makeadmin'>Make Admin</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -156,7 +156,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='manageproducts'>Manage Products</Link>
+                    <Link to='/manageproducts'>Manage Products</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -177,7 +177,7 @@ export default function Dropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    <Link to='manageorders'>Manage Orders</Link>
+                    <Link to='/manageorders'>Manage Orders</Link>
                   </button>
                 )}
               </Menu.Item>

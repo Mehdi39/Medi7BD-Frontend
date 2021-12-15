@@ -1,14 +1,15 @@
 import React, { useState} from 'react';
 import login from '../../../img/login.png'
-import { NavLink, useHistory, Link } from 'react-router-dom'
-import { useForm } from 'react-hook-form'
+import { useHistory, Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
+    // initial values
     const [ loginData, setLoginData ] = useState({})
     const history = useHistory()
-    const { user, userRegistration, authError } = useAuth();
+    const { userRegistration, authError } = useAuth();
 
+    // input field 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -17,6 +18,8 @@ const Register = () => {
         setLoginData(newLoginData)
     }
 
+
+    // function for registration button
     const onSubmit = e => {
         if ( loginData.password !== loginData.password2) {
             alert('Your Password did not match')

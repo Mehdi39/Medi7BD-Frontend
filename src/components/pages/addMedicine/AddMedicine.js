@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router";
 import axios from 'axios'
 
 const AddMedicine = () => {
   const { register, handleSubmit, reset } = useForm();
-  const history = useHistory();
 
   const onSubmit = (data) => {
     axios.post('https://floating-peak-99575.herokuapp.com/addmedicine', data)
@@ -17,6 +15,7 @@ const AddMedicine = () => {
       })
   };
 
+  
   return (
     <>
       <div className="container mx-auto bg-blue-50 py-5">

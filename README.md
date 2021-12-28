@@ -1,4 +1,4 @@
-# About the Apps Medicinale
+# About the Apps Medi7BD
 This is a Healthcare related web apps based on React js and Google Firebase technologies. People can Sign-up/in. Book a Appointment for a Doctor Visit and get necessary Medicines from here. 
 
 ## New Features coming soon
